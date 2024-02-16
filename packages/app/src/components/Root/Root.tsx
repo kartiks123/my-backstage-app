@@ -39,8 +39,6 @@ import CategoryIcon from '@material-ui/icons/Category';
 import MyCustomLogoFull from './logo/my-company-logo.png';
 import { useApp } from '@backstage/core-plugin-api';
 
-
-
 const LogoFull = () => {
   return <img src={MyCustomLogoFull} />;
 };
