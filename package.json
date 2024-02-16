@@ -56,6 +56,7 @@
     ]
   },
   "dependencies": {
+    "@backstage/plugin-home": "^0.6.1",
     "@backstage/theme": "^0.5.0"
   }
 }

@@ -1,0 +1,5 @@
+# Backstage override configuration for your local development environment
+integrations:
+  github:
+    - host: github.com
+      token: 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 # this should be the token from GitHub

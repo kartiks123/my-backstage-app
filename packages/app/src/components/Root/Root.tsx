@@ -5,7 +5,8 @@ import ExtensionIcon from '@material-ui/icons/Extension';
 import MapIcon from '@material-ui/icons/MyLocation';
 import LibraryBooks from '@material-ui/icons/LibraryBooks';
 import CreateComponentIcon from '@material-ui/icons/AddCircleOutline';
-import LogoFull from './LogoFull';
+// Remove the conflicting import statement for 'LogoFull'
+// import LogoFull from './LogoFull';
 import LogoIcon from './LogoIcon';
 import {
   Settings as SidebarSettings,
@@ -29,6 +30,14 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 
 import InternalToolIcon from './internal-tool.icon.svg';
+
+import CategoryIcon from '@material-ui/icons/Category';
+
+import MyCustomLogoFull from './logo/my-company-logo.png';
+
+const LogoFull = () => {
+  return <img src={MyCustomLogoFull} />;
+};
 
 const useSidebarLogoStyles = makeStyles({
   root: {
@@ -61,14 +70,14 @@ const SidebarLogo = () => {
 export const Root = ({ children }: PropsWithChildren<{}>) => (
   <SidebarPage>
     <Sidebar>
-      <SidebarLogo />
-      <SidebarGroup label="Search" icon={<SearchIcon />} to="/search">
+        <SidebarLogo />
+        <SidebarGroup label="Search" icon={<SearchIcon />} to="/search">
         <SidebarSearchModal />
       </SidebarGroup>
       <SidebarDivider />
       <SidebarGroup label="Menu" icon={<MenuIcon />}>
         {/* Global nav, not org-specific */}
-        <SidebarItem icon={HomeIcon} to="catalog" text="Home" />
+        <SidebarItem icon={HomeIcon} to="/" text="Home" />
         <SidebarItem icon={ExtensionIcon} to="api-docs" text="APIs" />
         <SidebarItem icon={LibraryBooks} to="docs" text="Docs" />
         <SidebarItem icon={CreateComponentIcon} to="create" text="Create..." />

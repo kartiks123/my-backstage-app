@@ -101,7 +101,7 @@ const myTheme = createTheme({
     },
   },
   defaultPageTheme: 'home',
-  fontFamily: 'Comic Sans MS',
+  fontFamily: 'Bookman Old Style',
   /* below drives the header colors */
   pageTheme: {
     home: genPageTheme({ colors: ['#8c4351', '#343b58'], shape: shapes.wave }),
