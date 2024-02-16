@@ -229,6 +229,14 @@ const app = createApp({
 
 const routes = (
   <FlatRoutes>
+      <Route
+      path="/catalog-import"
+      element={
+        <RequirePermission permission={catalogEntityCreatePermission}>
+          <CatalogImportPage />
+        </RequirePermission>
+      }
+    />
     {/* <Route path="/" element={<Navigate to="catalog" />} /> */}
     {/* <Navigate key="/" to="catalog" /> */}
     <Route path="/" element={<HomepageCompositionRoot />}>
