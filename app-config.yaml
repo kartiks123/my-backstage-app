@@ -28,14 +28,14 @@ backend:
   # This is for local development only, it is not recommended to use this in production
   # The production database configuration is stored in app-config.production.yaml
   database:
-    client: better-sqlite3
-    connection: ':memory:'
-    host: localhost
-    # Default postgresql port is 5432; this might be different for your installation
-    port: 5432
-    user: postgres
-    # Replace the password below with your postgresql password:
-    password: kartik123
+    client: pg
+    connection: 
+      host: 127.0.0.1
+      # Default postgresql port is 5432; this might be different for your installation
+      port: 5432
+      user: 'postgres'
+      # Replace the password below with your postgresql password:
+      password: 'kartik123'
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
 
 integrations:
