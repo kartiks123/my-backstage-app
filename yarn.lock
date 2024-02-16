@@ -3123,6 +3123,26 @@
   dependencies:
     "@backstage/backend-plugin-api" "^0.6.9"
 
+"@backstage/plugin-gcalendar@^0.3.22":
+  version "0.3.22"
+  resolved "https://registry.yarnpkg.com/@backstage/plugin-gcalendar/-/plugin-gcalendar-0.3.22.tgz#d643c07c605e218ea72bda4655acb2fccc4147be"
+  integrity sha512-Fl6WOD8G3H00EucEXzHOa9AjyWrJUdMNImg9yp+04n45Z8wY0SybNfK5lf3LbeVMJbv1sXAAmCYTPnUda1l2Xg==
+  dependencies:
+    "@backstage/core-components" "^0.13.10"
+    "@backstage/core-plugin-api" "^1.8.2"
+    "@backstage/errors" "^1.2.3"
+    "@material-ui/core" "^4.12.2"
+    "@material-ui/icons" "^4.9.1"
+    "@maxim_mazurok/gapi.client.calendar" "^3.0.20220408"
+    "@tanstack/react-query" "^4.1.3"
+    "@types/react" "^16.13.1 || ^17.0.0"
+    classnames "^2.3.1"
+    dompurify "^2.3.6"
+    lodash "^4.17.21"
+    luxon "^3.0.0"
+    material-ui-popup-state "^1.9.3"
+    react-use "^17.2.4"
+
 "@backstage/plugin-github-actions@^0.6.10":
   version "0.6.10"
   resolved "https://registry.yarnpkg.com/@backstage/plugin-github-actions/-/plugin-github-actions-0.6.10.tgz#d64e9ba81a2138d36feb5b45209d7701492de364"
@@ -3184,6 +3204,26 @@
     react-resizable "^3.0.4"
     react-use "^17.2.4"
     zod "^3.22.4"
+
+"@backstage/plugin-microsoft-calendar@^0.1.11":
+  version "0.1.11"
+  resolved "https://registry.yarnpkg.com/@backstage/plugin-microsoft-calendar/-/plugin-microsoft-calendar-0.1.11.tgz#e1b8f8beca55c477d2f1960652a28d3e50137bf3"
+  integrity sha512-bFD0f5UvGI0uG2o5mk2uSxmXzJ6bNdFiDce7FqiR8CbQTDoyXHHPe4QwiOrM49pjdrpw0OXl3fpO6S5qQN53Dw==
+  dependencies:
+    "@backstage/core-components" "^0.13.10"
+    "@backstage/core-plugin-api" "^1.8.2"
+    "@backstage/errors" "^1.2.3"
+    "@material-ui/core" "^4.12.2"
+    "@material-ui/icons" "^4.9.1"
+    "@microsoft/microsoft-graph-types" "^2.25.0"
+    "@tanstack/react-query" "^4.1.3"
+    "@types/react" "^16.13.1 || ^17.0.0"
+    classnames "^2.3.1"
+    dompurify "^2.3.6"
+    lodash "^4.17.21"
+    luxon "^3.0.0"
+    material-ui-popup-state "^1.9.3"
+    react-use "^17.2.4"
 
 "@backstage/plugin-org@^0.6.19":
   version "0.6.19"
@@ -5404,6 +5444,18 @@
     "@babel/runtime" "^7.4.4"
     prop-types "^15.7.2"
     react-is "^16.8.0 || ^17.0.0"
+
+"@maxim_mazurok/gapi.client.calendar@^3.0.20220408":
+  version "3.0.20220805"
+  resolved "https://registry.yarnpkg.com/@maxim_mazurok/gapi.client.calendar/-/gapi.client.calendar-3.0.20220805.tgz#ccc3c12f83b361daf5e48e0a2ff7abee5b0a6c5d"
+  integrity sha512-YwUDC4G4amUkM4u55wJpARowbs6AjJoF+PxxLEz3ZoHXvzP/VWPb1L0AhxnbFwDhWKVFcXkZTEGDc59PcuIJjQ==
+  dependencies:
+    "@types/gapi.client" "*"
+
+"@microsoft/microsoft-graph-types@^2.25.0":
+  version "2.40.0"
+  resolved "https://registry.yarnpkg.com/@microsoft/microsoft-graph-types/-/microsoft-graph-types-2.40.0.tgz#65f51600ab45ace97d7b1368c47f9e0f835fddca"
+  integrity sha512-1fcPVrB/NkbNcGNfCy+Cgnvwxt6/sbIEEFgZHFBJ670zYLegENYJF8qMo7x3LqBjWX2/Eneq5BVVRCLTmlJN+g==
 
 "@motionone/animation@^10.12.0":
   version "10.17.0"
@@ -8073,6 +8125,19 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
+"@tanstack/query-core@4.36.1":
+  version "4.36.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-4.36.1.tgz#79f8c1a539d47c83104210be2388813a7af2e524"
+  integrity sha512-DJSilV5+ytBP1FbFcEJovv4rnnm/CokuVvrBEtW/Va9DvuJ3HksbXUJEpI0aV1KtuL4ZoO9AVE6PyNLzF7tLeA==
+
+"@tanstack/react-query@^4.1.3":
+  version "4.36.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-4.36.1.tgz#acb589fab4085060e2e78013164868c9c785e5d2"
+  integrity sha512-y7ySVHFyyQblPl3J3eQBWpXZkliroki3ARnBKsdJchlgt7yJLRDUcf4B8soufgiYt3pEQIkBWBx1N9/ZPIeUWw==
+  dependencies:
+    "@tanstack/query-core" "4.36.1"
+    use-sync-external-store "^1.2.0"
+
 "@tanstack/react-virtual@^3.0.0-beta.60":
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/@tanstack/react-virtual/-/react-virtual-3.0.4.tgz#32a90aa6faa2eeebb5f4ca561d26bae9f3435e45"
@@ -8382,6 +8447,11 @@
     "@types/qs" "*"
     "@types/serve-static" "*"
 
+"@types/gapi.client@*":
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/@types/gapi.client/-/gapi.client-1.0.8.tgz#8e02c57493b014521f2fa3359166c01dc2861cd7"
+  integrity sha512-qJQUmmumbYym3Amax0S8CVzuSngcXsC1fJdwRS2zeW5lM63zXkw4wJFP+bG0jzgi0R6EsJKoHnGNVTDbOyG1ng==
+
 "@types/graceful-fs@^4.1.3":
   version "4.1.9"
   resolved "https://registry.yarnpkg.com/@types/graceful-fs/-/graceful-fs-4.1.9.tgz#2a06bc0f68a20ab37b3e36aa238be6abdf49e8b4"
@@ -8666,7 +8736,7 @@
   resolved "https://registry.yarnpkg.com/@types/range-parser/-/range-parser-1.2.7.tgz#50ae4353eaaddc04044279812f52c8c65857dbcb"
   integrity sha512-hKormJbkJqzQGhziax5PItDUTMAM9uE2XXQmM37dyd4hVM+5aVl7oVxMVUiVQn2oCQFN/LKCZdvSM0pFRqbSmQ==
 
-"@types/react-dom@*", "@types/react-dom@^18", "@types/react-dom@^18.0.0":
+"@types/react-dom@*", "@types/react-dom@^18.0.0":
   version "18.2.19"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.2.19.tgz#b84b7c30c635a6c26c6a6dfbb599b2da9788be58"
   integrity sha512-aZvQL6uUbIJpjZk4U8JZGbau9KDeAwMfmhyWorxgBkqDIEf6ROjRozcmPIicqsUwPUjbkDfHKgGee1Lq65APcA==
@@ -8704,10 +8774,19 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.13.1 || ^17.0.0", "@types/react@^16.13.1 || ^17.0.0 || ^18.0.0", "@types/react@^18":
+"@types/react@*", "@types/react@^16.13.1 || ^17.0.0 || ^18.0.0":
   version "18.2.55"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.55.tgz#38141821b7084404b5013742bc4ae08e44da7a67"
   integrity sha512-Y2Tz5P4yz23brwm2d7jNon39qoAtMMmalOQv6+fEFt1mT+FcM3D841wDpoUvFXhaYenuROCy3FZYqdTjM7qVyA==
+  dependencies:
+    "@types/prop-types" "*"
+    "@types/scheduler" "*"
+    csstype "^3.0.2"
+
+"@types/react@^16.13.1 || ^17.0.0":
+  version "17.0.75"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.75.tgz#cffbc76840a12fcadaf5a3cf14878bb06efcf73d"
+  integrity sha512-MSA+NzEzXnQKrqpO63CYqNstFjsESgvJAdAyyJ1n6ZQq/GLgf6nOfIKwk+Twuz0L1N6xPe+qz5xRCJrbhMaLsw==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -9484,6 +9563,7 @@ anymatch@^3.0.3, anymatch@~3.1.2:
     "@backstage/plugin-catalog-react" "^1.9.3"
     "@backstage/plugin-github-actions" "^0.6.10"
     "@backstage/plugin-home" "^0.6.1"
+    "@backstage/plugin-microsoft-calendar" "^0.1.11"
     "@backstage/plugin-org" "^0.6.19"
     "@backstage/plugin-permission-react" "^0.4.19"
     "@backstage/plugin-scaffolder" "^1.17.1"
@@ -12128,7 +12208,7 @@ dompurify@=3.0.8:
   resolved "https://registry.yarnpkg.com/dompurify/-/dompurify-3.0.8.tgz#e0021ab1b09184bc8af7e35c7dd9063f43a8a437"
   integrity sha512-b7uwreMYL2eZhrSCRC4ahLTeZcPZxSmYfmcQGXGkXiZSNW1X85v+SDM5KsWcpivIiUBH47Ji7NtyUdpLeF5JZQ==
 
-dompurify@^2.2.7, dompurify@^2.2.9:
+dompurify@^2.2.7, dompurify@^2.2.9, dompurify@^2.3.6:
   version "2.4.7"
   resolved "https://registry.yarnpkg.com/dompurify/-/dompurify-2.4.7.tgz#277adeb40a2c84be2d42a8bcd45f582bfa4d0cfc"
   integrity sha512-kxxKlPEDa6Nc5WJi+qRgPbOAbgTpSULL+vI3NUXsZMlkJxTqYI9wg5ZTay2sFrdZRWHPWNi+EdAhcJf81WtoMQ==
