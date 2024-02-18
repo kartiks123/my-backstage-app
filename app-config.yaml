@@ -28,7 +28,7 @@ backend:
   # This is for local development only, it is not recommended to use this in production
   # The production database configuration is stored in app-config.production.yaml
   database:
-    client: better-sqlite3
+    client: pg
     connection: 
       host: 127.0.0.1
       # Default postgresql port is 5432; this might be different for your installation
@@ -77,11 +77,14 @@ auth:
   providers:
     github:
       development:
-        clientId: 33c81024971b81e81483
-        clientSecret: fff60cdcfd78c7385337796a73a149500c419c8a
+        clientId: cbea8cc8bff27c2ade99
+        clientSecret: 4fc97d6b0f031f432fcf85d374f0d98890430a3f
 
 scaffolder:
   # see https://backstage.io/docs/features/software-templates/configuration for software template options
+
+permission:
+  enabled: true
 
 catalog:
   import:
@@ -115,3 +118,7 @@ catalog:
     #   target: https://github.com/backstage/backstage/blob/master/packages/catalog-model/examples/acme-corp.yaml
     #   rules:
     #     - allow: [User, Group]
+
+
+# permission:
+#   enabled: true
