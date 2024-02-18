@@ -56,7 +56,7 @@ yarn install
 yarn dev
 
 
-This is all the work done from my end and I know that this is just the beginning :)
+*This is all the work done from my end and I know that this is just the beginning :)*
 > Personally speaking, I am loving how Backstage is working and what it has to offer. Solving bugs and errors along the way, going into depth why certain features were not running while setting up Backstage or finding out the root cause, intrigued me due to which I am now more interested towards knowing more about it.
 
 # WISHING MYSELF, GOOD LUCK :)
