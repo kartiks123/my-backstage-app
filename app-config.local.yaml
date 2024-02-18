@@ -2,4 +2,4 @@
 integrations:
   github:
     - host: github.com
-      token: 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 # this should be the token from GitHub
+      token: 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 # this should be the token from GitHub
