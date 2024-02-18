@@ -57,6 +57,7 @@
   },
   "dependencies": {
     "@backstage/plugin-home": "^0.6.1",
-    "@backstage/theme": "^0.5.0"
+    "@backstage/theme": "^0.5.0",
+    "@circleci/backstage-plugin": "^0.1.1"
   }
 }
