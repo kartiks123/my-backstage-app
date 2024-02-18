@@ -13,6 +13,10 @@ backend:
   # all interfaces, the most permissive setting. The right value depends on your specific deployment.
   listen: ':7007'
 
+  auth:
+    keys:
+      - secret: vVwhnv1RmEseUQvRVaG82DmAzB48fSIJ
+
   # config options: https://node-postgres.com/api/client
   database:
     client: pg

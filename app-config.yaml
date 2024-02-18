@@ -35,7 +35,7 @@ backend:
       port: 5432
       user: 'postgres'
       # Replace the password below with your postgresql password:
-      password: 'kartik123'
+      password: 'secret'
   # workingDirectory: /tmp # Use this to configure a working directory for the scaffolder, defaults to the OS temp-dir
 
 integrations:
