@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
     width: '95%', // Increased length of search bar
   },
   gridItem: {
-    backgroundColor: '#f0f0f0', // Light gray color for grid item
+    backgroundColor: '#e6b410', // Light gray color for grid item
   },
 }));
 
