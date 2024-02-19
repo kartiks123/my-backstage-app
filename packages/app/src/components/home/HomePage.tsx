@@ -1,149 +1,76 @@
-import Grid from '@material-ui/core/Grid';
-import { HomePageCompanyLogo } from '@backstage/plugin-home';
-
-const HomePage: React.FC<{}> = () => (
-  <Grid container spacing={3}>
-    <Grid item xs={12} md={4}>
-      <HomePageCompanyLogo />
-    </Grid>
-  </Grid>
-);
-
-export default HomePage;
-
-
-import React, { ComponentType } from 'react';
-import { CustomHomepageGrid } from '@backstage/plugin-home';
+import React from 'react';
+import { makeStyles, Grid, Paper, Typography } from '@material-ui/core';
 import {
-  starredEntitiesApiRef,
-  MockStarredEntitiesApi,
-  entityRouteRef,
-  catalogApiRef,
-} from '@backstage/plugin-catalog-react';
-import { wrapInTestApp, TestApiProvider } from '@backstage/test-utils';
-import { configApiRef } from '@backstage/core-plugin-api';
-import { ConfigReader } from '@backstage/config';
-import { searchApiRef } from '@backstage/plugin-search-react';
-import { HomePageSearchBar, searchPlugin } from '@backstage/plugin-search';
-import { HomePageCalendar } from '@backstage/plugin-gcalendar';
-import { MicrosoftCalendarCard } from '@backstage/plugin-microsoft-calendar';
-import { HomePageRandomJoke, HomePageStarredEntities } from '@backstage/plugin-home';
+  HomePageCompanyLogo,
+  HomePageToolkit,
+  HomePageStarredEntities,
+} from '@backstage/plugin-home';
+import { HomePageSearchBar } from '@backstage/plugin-search';
 
-const entities = [
-  {
-    apiVersion: '1',
-    kind: 'Component',
-    metadata: {
-      name: 'mock-starred-entity',
-      title: 'Mock Starred Entity!',
-    },
+const useStyles = makeStyles(theme => ({
+  root: {
+    backgroundColor: '#f0f0f0', // Light gray color for background
+    minHeight: '100vh',
+    padding: theme.spacing(4),
   },
-  {
-    apiVersion: '1',
-    kind: 'Component',
-    metadata: {
-      name: 'mock-starred-entity-2',
-      title: 'Mock Starred Entity 2!',
-    },
+  container: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    minHeight: '100vh',
+    padding: theme.spacing(4),
+    backgroundColor: '#f0f0f0', // Light gray color for container
+    border: `2px solid ${theme.palette.secondary.main}`, // Color matched with blue sidebar color
+    borderRadius: theme.spacing(1),
   },
-  {
-    apiVersion: '1',
-    kind: 'Component',
-    metadata: {
-      name: 'mock-starred-entity-3',
-      title: 'Mock Starred Entity 3!',
-    },
+  title: {
+    color: '#333333', // Dark gray color for text
+    marginBottom: theme.spacing(4),
   },
-  {
-    apiVersion: '1',
-    kind: 'Component',
-    metadata: {
-      name: 'mock-starred-entity-4',
-      title: 'Mock Starred Entity 4!',
-    },
+  searchBarContainer: {
+    marginBottom: theme.spacing(4),
+    backgroundColor: '#f9f9f9', // Lighter gray color for search bar
+    padding: theme.spacing(2),
+    borderRadius: theme.spacing(1),
+    width: '95%', // Increased length of search bar
   },
-];
+  gridItem: {
+    backgroundColor: '#f0f0f0', // Light gray color for grid item
+  },
+}));
 
-const mockCatalogApi = {
-  getEntities: async () => ({ items: entities }),
-};
-
-const starredEntitiesApi = new MockStarredEntitiesApi();
-starredEntitiesApi.toggleStarred('component:default/example-starred-entity');
-starredEntitiesApi.toggleStarred('component:default/example-starred-entity-2');
-starredEntitiesApi.toggleStarred('component:default/example-starred-entity-3');
-starredEntitiesApi.toggleStarred('component:default/example-starred-entity-4');
-
-export const HomeTemplates = {
-  title: 'Plugins/Home/Templates',
-  decorators: [
-    (Story: ComponentType<{}>) =>
-      wrapInTestApp(
-        <>
-          <TestApiProvider
-            apis={[
-              [catalogApiRef, mockCatalogApi],
-              [starredEntitiesApiRef, starredEntitiesApi],
-              [searchApiRef, { query: () => Promise.resolve({ results: [] }) }],
-              [
-                configApiRef,
-                new ConfigReader({
-                  backend: {
-                    baseUrl: 'https://localhost:7007',
-                  },
-                }),
-              ],
-            ]}
-          >
-            <Story />
-          </TestApiProvider>
-        </>,
-        {
-          mountedRoutes: {
-            '/hello-company': searchPlugin.routes.root,
-            '/catalog/:namespace/:kind/:name': entityRouteRef,
-          },
-        },
-      ),
-  ],
-};
-
-export const CustomizableTemplate = () => {
-  // This is the default configuration that is shown to the user
-  // when first arriving to the homepage.
-  const defaultConfig = [
-    {
-      component: 'HomePageSearchBar',
-      x: 0,
-      y: 0,
-      width: 12,
-      height: 5,
-    },
-    {
-      component: 'HomePageRandomJoke',
-      x: 0,
-      y: 2,
-      width: 6,
-      height: 16,
-    },
-    {
-      component: 'HomePageStarredEntities',
-      x: 6,
-      y: 2,
-      width: 6,
-      height: 12,
-    },
-  ];
+const HomePage = () => {
+  const classes = useStyles();
 
   return (
-    <CustomHomepageGrid config={defaultConfig} rowHeight={10}>
-      {/* Insert the allowed widgets inside the grid. User can add, organize and
-      remove the widgets as they want. */}
-      <HomePageSearchBar />
-      <HomePageRandomJoke />
-      <HomePageCalendar />
-      <MicrosoftCalendarCard />
-      <HomePageStarredEntities />
-    </CustomHomepageGrid>
+    <Grid container spacing={3} className={classes.root}>
+      <Grid item xs={12} className={classes.gridItem}>
+        <HomePageCompanyLogo />
+      </Grid>
+      <Grid item xs={12} className={classes.gridItem}>
+        <Paper className={classes.container}>
+          <Typography variant="h4" className={classes.title}>
+            Search Page
+          </Typography>
+          <Paper className={classes.searchBarContainer}>
+            <HomePageSearchBar placeholder="Search" />
+          </Paper>
+          <Paper className={classes.searchBarContainer}>
+            <HomePageStarredEntities />
+          </Paper>
+          <Paper className={classes.searchBarContainer}>
+            <HomePageToolkit
+              tools={Array(8).fill({
+                url: '#',
+                label: 'link',
+              })}
+            />
+          </Paper>
+        </Paper>
+      </Grid>
+    </Grid>
   );
 };
+
+export default HomePage;

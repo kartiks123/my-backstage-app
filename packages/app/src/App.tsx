@@ -24,7 +24,7 @@ import { ReportIssue } from '@backstage/plugin-techdocs-module-addons-contrib';
 import { UserSettingsPage } from '@backstage/plugin-user-settings';
 import { apis } from './apis';
 import { HomepageCompositionRoot } from '@backstage/plugin-home';
-import HomePage from './components/home/HomePage';
+import  HomePage from './components/home/HomePage';
 import { entityPage } from './components/catalog/EntityPage';
 import { searchPage } from './components/search/SearchPage';
 import { Root } from './components/Root';
